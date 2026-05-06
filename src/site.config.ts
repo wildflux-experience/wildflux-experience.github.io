@@ -10,21 +10,21 @@ export const siteConfig: SiteConfig = {
 		- The link value found in src/components/layout/Header.astro L:35
 		- In the footer found in src/components/layout/Footer.astro L:12
 	*/
-	title: "Astro Cactus",
+	title: "WildFlux Experience",
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
-	author: "Chris Williams",
+	author: "Blackfish Creation",
 	// Used as the default description meta property and webmanifest description
-	description: "An opinionated starter theme for Astro",
+	description: "Une experience sonore de l'intuition jusqu'au réel",
 	// HTML lang property, found in src/layouts/Base.astro L:18 & astro.config.ts L:48
-	lang: "en-GB",
+	lang: "fr-FR",
 	// Meta property, found in src/components/BaseHead.astro L:42
-	ogLocale: "en_GB",
+	ogLocale: "fr-FR",
 	// Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
 	date: {
-		locale: "en-GB",
+		locale: "fr-FR",
 		options: {
 			day: "numeric",
-			month: "short",
+			month: "long",
 			year: "numeric",
 		},
 	},
@@ -34,19 +34,23 @@ export const siteConfig: SiteConfig = {
 export const menuLinks: { path: string; title: string }[] = [
 	{
 		path: "/",
-		title: "Home",
+		title: "Bienvenue",
 	},
 	{
-		path: "/about/",
-		title: "About",
+		path: "/la-demarche/",
+		title: "La Démarche",
 	},
 	{
-		path: "/posts/",
-		title: "Blog",
+		path: "/le-coeur/",
+		title: "Le Coeur",
 	},
 	{
-		path: "/notes/",
-		title: "Notes",
+		path: "/explorations/",
+		title: "Explorations",
+	},
+	{
+		path: "/animations/",
+		title: "Animations",
 	},
 ];
 
