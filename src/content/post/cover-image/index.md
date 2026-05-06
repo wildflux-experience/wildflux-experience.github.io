@@ -6,6 +6,7 @@ coverImage:
   src: "./cover.png"
   alt: "cover image"
 tags: ["test"]
+pinned: false
 ---
 
 ## Titre ici 

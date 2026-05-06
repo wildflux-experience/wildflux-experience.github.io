@@ -6,6 +6,7 @@ coverImage:
   src: "./cover.png"
   alt: "cover image"
 tags: ["exploration"]
+pinned: true
 ---
 
 
