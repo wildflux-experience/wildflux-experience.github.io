@@ -1,136 +1,114 @@
-@import "tailwindcss";
-/* tailwind to ignore satori generated og-image */
-@source not "../pages/og-image";
-/* config for tailwindcss-typography plugin */
-@config "../../tailwind.config.ts";
+/* Tokens */
+:root {
+  --color-text: #111111;
+  --color-background: #ffffff;
+  --color-muted: #555555;
+  --color-surface: #f5f5f5;
+  --page-width: 1440px;
+  --page-gutter: 90vw;
 
-/* use a selector-based strategy for dark mode */
-@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
-
-/* register custom colour properties */
-@property --color-global-bg {
-	syntax: "<color>";
-	inherits: true;
-	initial-value: oklch(98.48% 0 0);
-}
-@property --color-global-text {
-	syntax: "<color>";
-	inherits: true;
-	initial-value: oklch(26.99% 0.0096 235.05);
-}
-@property --color-muted {
-	syntax: "<color>";
-	inherits: true;
-	initial-value: oklch(44.6% 0.03 256.802);
-}
-@property --color-link {
-	syntax: "<color>";
-	inherits: true;
-	initial-value: oklch(55.44% 0.0431 185.69);
-}
-@property --color-accent {
-	syntax: "<color>";
-	inherits: true;
-	initial-value: oklch(55.27% 0.195 19.06);
-}
-@property --color-accent-2 {
-	syntax: "<color>";
-	inherits: true;
-	initial-value: oklch(18.15% 0 0);
-}
-@property --color-quote {
-	syntax: "<color>";
-	inherits: true;
-	initial-value: oklch(55.27% 0.195 19.06);
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
 }
 
-/* you could refactor below to use light-dark(), depending on your target audience */
-@theme {
-	--color-global-bg: oklch(98.48% 0 0);
-	--color-global-text: oklch(26.99% 0.0096 235.05);
-	--color-muted: oklch(44.6% 0.03 256.802);
-	--color-link: oklch(55.44% 0.0431 185.69);
-	--color-accent: oklch(55.27% 0.195 19.06);
-	--color-accent-2: oklch(18.15% 0 0);
-	--color-quote: oklch(55.27% 0.195 19.06);
+/* Base */
+* {
+  box-sizing: border-box;
 }
 
-@layer base {
-	html {
-		color-scheme: light dark;
-		accent-color: var(--color-accent);
-		scrollbar-gutter: stable;
-
-		&[data-theme="light"] {
-			color-scheme: light;
-		}
-
-		&[data-theme="dark"] {
-			color-scheme: dark;
-			--color-global-bg: oklch(23.64% 0.0045 248);
-			--color-global-text: oklch(83.54% 0 264);
-			--color-muted: oklch(70.7% 0.022 261.325);
-			--color-link: oklch(70.44% 0.1133 349);
-			--color-accent: oklch(70.91% 0.1415 163.7);
-			--color-accent-2: oklch(94.66% 0 0);
-			--color-quote: oklch(94.8% 0.106 136.49);
-		}
-
-		--color-mode-transition-duration: 300ms;
-		--color-mode-transition-easing: ease-in-out;
-
-		transition:
-			--color-global-bg var(--color-mode-transition-duration) var(--color-mode-transition-easing),
-			--color-global-text var(--color-mode-transition-duration) var(--color-mode-transition-easing),
-			--color-muted var(--color-mode-transition-duration) var(--color-mode-transition-easing),
-			--color-link var(--color-mode-transition-duration) var(--color-mode-transition-easing),
-			--color-accent var(--color-mode-transition-duration) var(--color-mode-transition-easing),
-			--color-accent-2 var(--color-mode-transition-duration) var(--color-mode-transition-easing),
-			--color-quote var(--color-mode-transition-duration) var(--color-mode-transition-easing);
-	}
-
-	:target {
-		scroll-margin-block: 5ex;
-	}
-
-	@view-transition {
-		navigation: auto;
-	}
-
-	/* Astro image responsive styles, modified from -> https://docs.astro.build/en/guides/images/#responsive-image-styles */
-	:where([data-astro-image]) {
-		object-fit: var(--fit);
-		object-position: var(--pos);
-	}
-	[data-astro-image="full-width"] {
-		width: 100%;
-	}
-	[data-astro-image="constrained"] {
-		max-width: 100%;
-	}
+body {
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
 }
 
-@layer components {
-	@import "./components/admonition.css";
-	@import "./components/github-card.css";
-
-	.cactus-link {
-		@apply hover:decoration-link underline underline-offset-2 hover:decoration-2;
-	}
-
-	.title {
-		@apply text-accent-2 text-2xl font-semibold;
-	}
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-@utility prose {
-	--tw-prose-body: var(--color-global-text);
-	--tw-prose-bold: var(--color-global-text);
-	--tw-prose-bullets: var(--color-global-text);
-	--tw-prose-code: var(--color-global-text);
-	--tw-prose-headings: var(--color-accent-2);
-	--tw-prose-hr: 0.5px dashed #666;
-	--tw-prose-links: var(--color-global-text);
-	--tw-prose-quotes: var(--color-quote);
-	--tw-prose-th-borders: #666;
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+button {
+  font: inherit;
+}
+
+h1 {
+  min-width: 0;
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+/* Accessibility */
+.screen-reader-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Page Layout */
+.page {
+  width: min(var(--page-gutter), var(--page-width));
+  flex: 1;
+  margin: 0 auto;
+  padding: 8vh 0 4rem;
+}
+
+.page-header {
+  margin-bottom: 3rem;
+}
+
+.page-header p {
+  max-width: 42rem;
+  margin: 1rem 0 0;
+  color: var(--color-muted);
+  font-family: var(--font-subtitle);
+  line-height: 1.6;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+@media (min-width: 520px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 840px) {
+  h1 {
+    font-size: 5rem;
+  }
 }

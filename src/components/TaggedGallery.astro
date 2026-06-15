@@ -1,0 +1,170 @@
+---
+import '../styles/gallery.css';
+
+const { album } = Astro.props;
+const tags = Array.from(new Set(album.photos.flatMap((photo) => photo.tags))).sort();
+---
+
+<main class="page gallery-page">
+  <header class="page-header">
+    <a class="back-link" href="/galeries/">Galeries</a>
+    <h1>{album.title}</h1>
+    <p>{album.description}</p>
+  </header>
+
+  <section class="tag-panel" aria-label="Filtres de galerie">
+    <div class="tag-buttons" data-tag-buttons>
+      {
+        tags.map((tag) => (
+          <button class="tag-button" type="button" data-tag={tag} aria-pressed="false">
+            {tag}
+          </button>
+        ))
+      }
+    </div>
+    <div class="tag-actions">
+      <button class="tag-button" type="button" data-show-all aria-pressed="false">
+        Toutes les photos
+      </button>
+      <button class="tag-reset" type="button" data-tag-reset>Tout deselectionner</button>
+    </div>
+  </section>
+
+  <p class="gallery-empty" data-gallery-empty></p>
+
+  <section class="gallery-grid" aria-label={`Photos - ${album.title}`}>
+    {
+      album.photos.map((photo, index) => (
+        <button
+          class="gallery-card"
+          type="button"
+          data-photo-card
+          data-index={index}
+          data-tags={photo.tags.join(' ')}
+          data-src={`${album.folder}${photo.file}`}
+          data-caption={photo.caption}
+          hidden
+        >
+          <img
+            src={`${album.folder}${photo.file}`}
+            alt={photo.caption}
+            loading="lazy"
+            decoding="async"
+          />
+          <span>{photo.caption}</span>
+        </button>
+      ))
+    }
+  </section>
+
+  <dialog class="lightbox" data-lightbox>
+    <form method="dialog">
+      <button class="lightbox-close" type="submit" aria-label="Fermer">Fermer</button>
+    </form>
+    <button class="lightbox-nav lightbox-prev" type="button" data-lightbox-prev aria-label="Photo precedente">
+      <img src="/icons/arrow-left.svg" alt="" width="32" height="32" aria-hidden="true" />
+      <span class="screen-reader-only">Photo precedente</span>
+    </button>
+    <figure>
+      <img data-lightbox-image alt="" />
+      <figcaption data-lightbox-caption></figcaption>
+    </figure>
+    <button class="lightbox-nav lightbox-next" type="button" data-lightbox-next aria-label="Photo suivante">
+      <img src="/icons/arrow-right.svg" alt="" width="32" height="32" aria-hidden="true" />
+      <span class="screen-reader-only">Photo suivante</span>
+    </button>
+  </dialog>
+</main>
+
+<script>
+  const activeTags = new Set();
+  const showAllButton = document.querySelector('[data-show-all]');
+  const tagButtons = Array.from(document.querySelectorAll('[data-tag]'));
+  const resetButton = document.querySelector('[data-tag-reset]');
+  const photoCards = Array.from(document.querySelectorAll('[data-photo-card]'));
+  const emptyMessage = document.querySelector('[data-gallery-empty]');
+  const lightbox = document.querySelector('[data-lightbox]');
+  const lightboxImage = document.querySelector('[data-lightbox-image]');
+  const lightboxCaption = document.querySelector('[data-lightbox-caption]');
+  const previousButton = document.querySelector('[data-lightbox-prev]');
+  const nextButton = document.querySelector('[data-lightbox-next]');
+  let showAllPhotos = false;
+  let visibleCards = [];
+  let currentIndex = 0;
+
+  function updateGallery() {
+    visibleCards = photoCards.filter((card) => {
+      const tags = String(card.dataset.tags).split(' ');
+      const isVisible = showAllPhotos || tags.some((tag) => activeTags.has(tag));
+      card.hidden = !isVisible;
+      return isVisible;
+    });
+
+    emptyMessage.hidden = showAllPhotos || activeTags.size > 0;
+  }
+
+  function openLightbox(card) {
+    currentIndex = visibleCards.indexOf(card);
+    lightboxImage.src = card.dataset.src;
+    lightboxImage.alt = card.dataset.caption;
+    lightboxCaption.textContent = card.dataset.caption;
+    lightbox.showModal();
+  }
+
+  function showRelativePhoto(step) {
+    if (visibleCards.length === 0) return;
+    currentIndex = (currentIndex + step + visibleCards.length) % visibleCards.length;
+    const card = visibleCards[currentIndex];
+    lightboxImage.src = card.dataset.src;
+    lightboxImage.alt = card.dataset.caption;
+    lightboxCaption.textContent = card.dataset.caption;
+  }
+
+  tagButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const tag = button.dataset.tag;
+      showAllPhotos = false;
+      showAllButton.setAttribute('aria-pressed', 'false');
+
+      if (activeTags.has(tag)) {
+        activeTags.delete(tag);
+        button.setAttribute('aria-pressed', 'false');
+      } else {
+        activeTags.add(tag);
+        button.setAttribute('aria-pressed', 'true');
+      }
+      updateGallery();
+    });
+  });
+
+  showAllButton.addEventListener('click', () => {
+    showAllPhotos = !showAllPhotos;
+    activeTags.clear();
+    showAllButton.setAttribute('aria-pressed', String(showAllPhotos));
+    tagButtons.forEach((button) => button.setAttribute('aria-pressed', 'false'));
+    updateGallery();
+  });
+
+  resetButton.addEventListener('click', () => {
+    showAllPhotos = false;
+    activeTags.clear();
+    showAllButton.setAttribute('aria-pressed', 'false');
+    tagButtons.forEach((button) => button.setAttribute('aria-pressed', 'false'));
+    updateGallery();
+  });
+
+  photoCards.forEach((card) => {
+    card.addEventListener('click', () => openLightbox(card));
+  });
+
+  previousButton.addEventListener('click', () => showRelativePhoto(-1));
+  nextButton.addEventListener('click', () => showRelativePhoto(1));
+
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) {
+      lightbox.close();
+    }
+  });
+
+  updateGallery();
+</script>

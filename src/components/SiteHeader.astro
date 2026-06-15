@@ -1,0 +1,20 @@
+---
+import { site } from '../config/site';
+import HomeMenu from '../components/HomeMenu.astro';
+import { menuItems, site } from '../config/site';
+import '../styles/home.css';
+
+const {
+  homeHref = '/',
+  logoSrc = site.logo,
+  siteName = site.name,
+} = Astro.props;
+---
+
+<header class="site-header">
+  <a class="site-header-link" href={homeHref} aria-label="Retour a l'accueil">
+    <img class="site-header-logo" src={logoSrc} alt="" width="64" height="64" />
+    <span>{siteName}</span>
+  </a>
+  <HomeMenu items={menuItems} />
+</header>

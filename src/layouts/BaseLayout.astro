@@ -1,0 +1,35 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';
+import { site } from '../config/site';
+import '../styles/fonts.css';
+import '../styles/global.css';
+import '../styles/site-chrome.css';
+
+const {
+  title = site.title,
+  description = site.description,
+  showHeader = true,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={site.lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+  <body>
+    {showHeader && <SiteHeader />}
+    <slot />
+    <footer class="site-footer">
+      <img
+        class="site-logo"
+        src={site.logo}
+        alt={`${site.name} logo`}
+      />
+      <a href={`mailto:${site.email}`}>{site.email}</a>
+    </footer>
+  </body>
+</html>

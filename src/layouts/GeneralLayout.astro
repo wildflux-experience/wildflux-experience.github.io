@@ -1,0 +1,41 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import { site } from '../config/site';
+import '../styles/general.css';
+import BaseLayout from './BaseLayout.astro';
+
+const frontmatter = Astro.props.frontmatter ?? Astro.props;
+const {
+  title,
+  description = '',
+  image,
+  imageAlt = '',
+  backHref = '/',
+  backLabel = 'Retour',
+} = frontmatter;
+
+const pageTitle = title ? `${title} - ${site.title}` : site.title;
+---
+
+<BaseLayout title={pageTitle} description={description}>
+  <main class="page general-page">
+    <PageHeader
+      title={title}
+      description={description}
+      backHref={backHref}
+      backLabel={backLabel}
+    />
+
+    {
+      image && (
+        <figure class="general-cover">
+          <img src={image} alt={imageAlt} loading="eager" decoding="async" />
+        </figure>
+      )
+    }
+
+    <article class="general-content">
+      <slot />
+    </article>
+  </main>
+</BaseLayout>

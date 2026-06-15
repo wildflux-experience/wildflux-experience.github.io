@@ -1,0 +1,12 @@
+.poster-placeholder {
+  display: grid;
+  min-height: 18rem;
+  place-items: center;
+  border-top: 1px solid var(--color-text);
+  border-bottom: 1px solid var(--color-text);
+  color: var(--color-muted);
+}
+
+.poster-placeholder p {
+  margin: 0;
+}

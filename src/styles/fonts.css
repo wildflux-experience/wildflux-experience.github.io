@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@400;500;600&display=swap");
+
+:root {
+  --font-title: "Big Shoulders", ui-sans-serif, system-ui, sans-serif;
+  --font-subtitle: "Big Shoulders", ui-sans-serif, system-ui, sans-serif;
+  --font-body: Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-legend: var(--font-body);
+}
