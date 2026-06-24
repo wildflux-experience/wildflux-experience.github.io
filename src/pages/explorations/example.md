@@ -2,7 +2,7 @@
 layout: ../../layouts/GeneralLayout.astro
 title: Basic Article
 description: A reusable content page with Markdown, images, and links.
-backHref: /
+backHref: /exploration-menu/
 backLabel: Retour
 ---
 
