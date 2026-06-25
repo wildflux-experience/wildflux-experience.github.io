@@ -6,7 +6,7 @@ backHref: /
 backLabel: Retour
 ---
 
-Le projet *WildFlux Experience* est à l'origine, une initiative prenant place  sur le territoire de l'Ile de la Réunion en 2026. Elle se propose de mêler arts et sciences pour aller à la rencontre du public.
+Le projet **WildFlux Experience: une expérience sonore, de l’intuition jusqu’au réel** est à l'origine, une initiative prenant place  sur le territoire de l'Ile de la Réunion en 2026, qui se propose de mêler arts et sciences pour aller à la rencontre du public.
 
 ### Un volet scientifique et technologique
 

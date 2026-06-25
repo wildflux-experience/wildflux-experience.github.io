@@ -177,7 +177,7 @@ Il s'agit de dispositifs électroniques simplistes, basés sur des [cartes Ardui
 > ***Figure 5**. Schéma illustré du module nano-ultrasonic et sa connection avec le Théreminuscule*
 
 
-**Le nano-water** permet quant à lui de creer des impulsions musicales en exploitant les changements conductivité (capacité à laisser passser le courant) de l'eau du robinet (Figure 6). Ce module est encore plus simple dans la mesure où il ne nécessite aucun capteur supplémentaire, simplement la carte Arduino, quelques resistances et du fil conducteur. La conductivité ainsi mesurée va changer lorsqu'on y plonge et remue les doigts, on peut aussi y ajouter du sel, du jus de citron ou encore faire varier la position des fils immergés.
+**Le nano-water** permet quant à lui de creer des impulsions musicales en exploitant les changements conductivité (capacité à laisser passser le courant) de l'eau du robinet (Figure 6). Ce module est encore plus simple dans la mesure où il ne nécessite aucun capteur supplémentaire, simplement la carte Arduino, quelques resistances et du fil conducteur. La conductivité de l'eau que l'on mesure va changer lorsqu'on y plonge et remue les doigts, on peut aussi y ajouter du sel, du jus de citron ou encore faire varier la position des fils immergés.
 
 ![schema_nano_water](/images/thereminuscule_principe_conception_perspective_juin2026/schema_nano_water.png)
 

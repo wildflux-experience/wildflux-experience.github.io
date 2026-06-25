@@ -7,8 +7,13 @@ export const site = {
   logo: '/logo/logo_1ref.png',
   home: {
     title: "WILDFLUX EXPERIENCE",
-    intro:
-      "Une expérience sonore, de l'intuition jusqu'au réel",
+    intro: "Une expérience sonore, de l'intuition jusqu'au réel",
+    title_img: {
+      src: "/logo/titre_only_wildflux_experience.png",
+      alt: "Image titre",
+      width: 1000,
+      height: 0,
+    },
     cover: {
       src: '/cover/home_cover_5.jpg',
       alt: "Photographie de couverture",

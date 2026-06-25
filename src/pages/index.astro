@@ -8,9 +8,18 @@ import '../styles/home.css';
 <BaseLayout showHeader={false}>
   <main class="home">
     <header class="site-heading">
-      <h1>{site.home.title}</h1>
-      <p>{site.home.intro}</p>
-      <!-- <h3>{site.home.intro}</h3> -->
+      <!-- <h1>{site.home.title}</h1> -->
+      <figure class="home-title-img">
+        <img
+          src={site.home.title_img.src}
+          alt={site.home.title_img.alt}
+          width={site.home.title_img.width}
+          height={site.home.title_img.height}
+          decoding="async"
+          fetchpriority="high"
+        />
+      </figure>
+      <!-- <p>{site.home.intro}</p> -->
     </header>
 
     <HomeMenu items={menuItems} />
