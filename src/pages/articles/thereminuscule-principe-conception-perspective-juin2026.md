@@ -183,13 +183,13 @@ Il s'agit de dispositifs électroniques simplistes, basés sur des [cartes Ardui
 
 > ***Figure 6**. Schéma illustré du module nano-water et sa connection avec le Théreminuscule*
 
-**Le nano-lightbox** est construit autour d'un capteur de lumière permettant de mesurer l'intensité lumineuse ambiante, avec la spécificité de pouvoir également mesurer l'intensité dans des zones spécifiques du spectre lumineux, autour du rouge, du vert et du bleu (REF, ~X €). Avec ce module, on peut alors générer des mélodies en jouant sur la puissance de la source lumineuse, avec différentes lampes torches et en utilisant la transparence de matériaux colorés, comme des feuilles de papier ou des intercalaires plastiques placés entre la source et le capteur.
+**Le nano-lightbox** est construit autour d'un capteur de lumière (APDS-9960, ~7 €) permettant de mesurer l'intensité lumineuse ambiante, avec la spécificité de pouvoir également mesurer l'intensité dans des zones spécifiques du spectre lumineux, autour du rouge, du vert et du bleu. Avec ce module, on peut alors générer des mélodies en jouant sur la puissance et la couleur de la source lumineuse, avec par exemple différentes lampes torches et en utilisant la transparence de matériaux colorés, comme des feuilles de papier ou des intercalaires plastiques.
 
-![schema_nano_lightbox]()
+![schema_nano_lightbox](/images/thereminuscule_principe_conception_perspective_juin2026/schema_nano_lightbox.png)
 
 > ***Figure 7**. Schéma illustré du module nano-lightbox et sa connection avec le Théreminuscule*
 
-**Le nano-fishnchip** est un module un peu spécial car, contrairement aux précédents, celui-ci n'utilise pas de carte Arduino, mais une carte appelée *Fishnchip*, spécialement développée par une équipe du CNRS installée au LIRMM (Laboratoire d'Informatique, Robotique et Microélectronique de Montpellier). La carte *Fishnchip* est initialement conçue pour le suivi de la mégafaune marine et inclut directement des capteurs de pression, de température, de lumière et de mouvement. Dans ce module, on exploite le capteur de mouvement, aussi appelé centrale inertielle (IMU), capable d'intégrer l'orientation, la vitesse et la position de la carte. Ici, on crée ainsi des mélodies en la manipulant (rotation, secousse, déplacement).
+**Le nano-fishnchip** est un module un peu spécial car, contrairement aux précédents, celui-ci n'utilise pas de carte Arduino, mais une carte appelée *Fishnchip*, spécialement développée par une équipe du CNRS installée au LIRMM (Laboratoire d'Informatique, Robotique et Microélectronique de Montpellier). La carte *Fishnchip* est initialement conçue pour le suivi de la mégafaune marine et inclut directement des capteurs de pression, de température, de lumière et de mouvement (Figure 8). Dans ce module, on exploite le capteur de mouvement, aussi appelé centrale inertielle (IMU), capable d'intégrer l'orientation, la vitesse et la position de la carte. Ici, on crée ainsi des mélodies en la manipulant (rotation, secousse, déplacement).
 
 ![schema_nano_fishnchip](/images/thereminuscule_principe_conception_perspective_juin2026/schema_nano_fishnchip.png)
 
