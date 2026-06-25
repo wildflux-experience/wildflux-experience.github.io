@@ -22,6 +22,10 @@ backLabel: Retour
 - [Les Nano-Modules](#les-nano-modules)
   - [Qu’est ce que c’est ?](#quest-ce-que-cest--1)
   - [Présentation des modules "originaux"](#présentation-des-modules-originaux)
+    - [Le Nano-Ultrasonic](#le-nano-ultrasonic)
+    - [Le Nano-Water](#le-nano-water)
+    - [Le Nano-Lightbox](#le-nano-lightbox)
+    - [Le Nano-Fishnchip](#le-nano-fishnchip)
   - [Des possibilités quasi-infinies](#des-possibilités-quasi-infinies)
     - [Fabriquer pour comprendre](#fabriquer-pour-comprendre)
     - [Jouer pour ressentir](#jouer-pour-ressentir)
@@ -170,30 +174,38 @@ Les *Nano-Modules* suivants ont été conçus dès l'origine du projet, et les p
 
 Il s'agit de dispositifs électroniques simplistes, basés sur des [cartes Arduino](https://www.arduino.cc/en/hardware/#classic-family), principalement les modèles Uno et Nano (~20€), ainsi que sur des capteurs du commerce peu coûteux et destinés aux hobbyistes.
 
-**Le nano-ultrasonic** permet de jouer des mélodies par un simple geste de la main (Figure 5). Le composant principal est un capteur de distance à ultrasons (HC-SR04, ~3€), qui évalue la distance d'un objet placé devant lui. Il est accompagné de deux potentiomètres linéaires (~1€) et d'un bouton lumineux (~2€), afin de pouvoir contrôler des paramètres du *Thereminuscule* en parallèle.
+#### Le Nano-Ultrasonic
+
+Ce module permet de jouer des mélodies par un simple geste de la main (Figure 5). Le composant principal est un capteur de distance à ultrasons (HC-SR04, ~3€), qui évalue la distance d'un objet placé devant lui. Il est accompagné de deux potentiomètres linéaires (~1€) et d'un bouton lumineux (~2€), afin de pouvoir contrôler des paramètres du *Thereminuscule* en parallèle.
 
 ![schema_nano_ultrasonic](/images/thereminuscule_principe_conception_perspective_juin2026/schema_nano_ultrasonic.png)
 
-> ***Figure 5**. Schéma illustré du module nano-ultrasonic et sa connection avec le Théreminuscule*
+> ***Figure 5**. Schéma illustré du module Nano-Ultrasonic.*
 
 
-**Le nano-water** permet quant à lui de creer des impulsions musicales en exploitant les changements conductivité (capacité à laisser passser le courant) de l'eau du robinet (Figure 6). Ce module est encore plus simple dans la mesure où il ne nécessite aucun capteur supplémentaire, simplement la carte Arduino, quelques resistances et du fil conducteur. La conductivité de l'eau que l'on mesure va changer lorsqu'on y plonge et remue les doigts, on peut aussi y ajouter du sel, du jus de citron ou encore faire varier la position des fils immergés.
+#### Le Nano-Water
+
+Ce module permet quant à lui de creer des impulsions musicales en exploitant les changements conductivité (capacité à laisser passser le courant) de l'eau du robinet (Figure 6). Ce module est encore plus simple dans la mesure où il ne nécessite aucun capteur supplémentaire, simplement la carte Arduino, quelques resistances et du fil conducteur. La conductivité de l'eau que l'on mesure va changer lorsqu'on y plonge et remue les doigts, on peut aussi y ajouter du sel, du jus de citron ou encore faire varier la position des fils immergés.
 
 ![schema_nano_water](/images/thereminuscule_principe_conception_perspective_juin2026/schema_nano_water.png)
 
-> ***Figure 6**. Schéma illustré du module nano-water et sa connection avec le Théreminuscule*
+> ***Figure 6**. Schéma illustré du module Nano-Water.*
 
-**Le nano-lightbox** est construit autour d'un capteur de lumière (APDS-9960, ~7 €) permettant de mesurer l'intensité lumineuse ambiante, avec la spécificité de pouvoir également mesurer l'intensité dans des zones spécifiques du spectre lumineux, autour du rouge, du vert et du bleu. Avec ce module, on peut alors générer des mélodies en jouant sur la puissance et la couleur de la source lumineuse, avec par exemple différentes lampes torches et en utilisant la transparence de matériaux colorés, comme des feuilles de papier ou des intercalaires plastiques.
+#### Le Nano-Lightbox
+
+Ce module est construit autour d'un capteur de lumière (APDS-9960, ~7 €) permettant de mesurer l'intensité lumineuse ambiante, avec la spécificité de pouvoir également mesurer l'intensité dans des zones spécifiques du spectre lumineux, autour du rouge, du vert et du bleu (RVB). Avec ce module, on peut alors générer des mélodies en jouant sur la puissance et la couleur de la source lumineuse, avec par exemple différentes lampes torches et en utilisant la transparence de matériaux colorés, comme des feuilles de papier ou des intercalaires plastiques.
 
 ![schema_nano_lightbox](/images/thereminuscule_principe_conception_perspective_juin2026/schema_nano_lightbox.png)
 
-> ***Figure 7**. Schéma illustré du module nano-lightbox et sa connection avec le Théreminuscule*
+> ***Figure 7**. Schéma illustré du module Nano-Lightbox.*
 
-**Le nano-fishnchip** est un module un peu spécial car, contrairement aux précédents, celui-ci n'utilise pas de carte Arduino, mais une carte appelée *Fishnchip*, spécialement développée par une équipe du CNRS installée au LIRMM (Laboratoire d'Informatique, Robotique et Microélectronique de Montpellier). La carte *Fishnchip* est initialement conçue pour le suivi de la mégafaune marine et inclut directement des capteurs de pression, de température, de lumière et de mouvement (Figure 8). Dans ce module, on exploite le capteur de mouvement, aussi appelé centrale inertielle (IMU), capable d'intégrer l'orientation, la vitesse et la position de la carte. Ici, on crée ainsi des mélodies en la manipulant (rotation, secousse, déplacement).
+#### Le Nano-Fishnchip
+
+Ce module est un peu spécial car, contrairement aux précédents, celui-ci n'utilise pas de carte Arduino, mais une carte appelée *Fishnchip*, spécialement développée par une équipe du CNRS installée au LIRMM (Laboratoire d'Informatique, Robotique et Microélectronique de Montpellier). La carte *Fishnchip* est initialement conçue pour le suivi de la mégafaune marine et inclut directement des capteurs de pression, de température, de lumière et de mouvement (Figure 8). Dans ce module, on exploite le capteur de mouvement, aussi appelé centrale inertielle (IMU), capable d'intégrer l'orientation, la vitesse et la position de la carte. Ici, on crée ainsi des mélodies en la manipulant (rotation, secousse, déplacement).
 
 ![schema_nano_fishnchip](/images/thereminuscule_principe_conception_perspective_juin2026/schema_nano_fishnchip.png)
 
-> ***Figure 8**. Schéma illustré du module nano-fishnchip et sa connection avec le Théreminuscule*
+> ***Figure 8**. Schéma illustré du module Nano-Fishnchip.*
 
 ### Des possibilités quasi-infinies
 
@@ -204,13 +216,6 @@ La liste ci-dessous présente une palette de Nano-Modules possiblement réalisab
 #### Fabriquer pour comprendre
 
 *Ces modules explorent des principes physiques simples, facilement observables et manipulables : la lumière, la conductivité, la résistance électrique, le contact, l’eau, le corps humain ou encore le magnétisme. Leur objectif n’est pas seulement de produire un signal numérique exploitable par le Thereminuscule, mais aussi de rendre perceptible le lien entre un phénomène concret et la mélodie produite. Ils sont bien adaptés aux ateliers de fabrication et à la médiation scientifique.*
-
-- Boîte à lumière
-- Dessin graphite
-- Pince-crocodile orchestra
-- Circuit humain
-- Bassin à doigts
-- Pendule magnétique
 
 La **Boîte à lumière** propose de jouer avec l’ombre, la transparence et la couleur. En ouvrant une boîte, en faisant passer des papiers colorés ou en tournant une roue devant un capteur, les variations lumineuses deviennent des ondes sonores.
 
@@ -228,11 +233,6 @@ Le **Pendule magnétique** ouvre une dimension plus contemplative. Un aimant sus
 
 *Ces modules ont une intention plus instrumentale : ils doivent permettre un geste suffisamment précis, réactif et intuitif pour orienter la trajectoire musicale du Thereminuscule en temps réel.*
 
-- Baguette et maracas magiques
-- Ruban mélodique et Joystick
-- Manivelle et volant d’expression
-- Didgeridoo numérique
-
 Les **Baguettes et maracas magiques** transforment les mouvements de la main en données musicales. L’inclinaison, les secousses ou l’énergie du geste deviennent une manière de diriger la mélodie.
 
 Le **Ruban mélodique et Joystick** propose une approche plus précise : un ruban résistif ou un potentiomètre linéaire permet de parcourir une plage de valeurs de manière continue, tandis qu’un joystick ajoute une modulation complémentaire avec l’autre main.
@@ -244,15 +244,6 @@ Le **Didgeridoo numérique**, enfin, mobilise le souffle comme geste expressif. 
 #### Contempler pour questionner
 
 *Ces modules sont davantage portés par leur forme, leur imaginaire ou leur dimension plastique : soleil, nuages, matière frottée, eau qui sèche, branche qui plie, foule, jardin, méduse, écume, magnétisme, constellation. Leur rôle n’est pas seulement de produire un contrôle musical, mais aussi de faire surgir une question, une image ou une situation.*
-
-- Mini centrale solaire
-- Frottoir sonore
-- Pluie et évaporation musicale
-- Branche musicale
-- Foule en délire
-- Jardin sonore miniature
-- Méduse suspendue
-- Constellation magnétique
 
 La **Mini centrale solaire** transforme la lumière en source musicale. Un petit panneau solaire, orienté à la main ou exposé à des soleils artificiels, réagit aux ombres et aux nuages translucides que l’on place devant lui.
 
