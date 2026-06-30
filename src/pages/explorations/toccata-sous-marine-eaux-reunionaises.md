@@ -36,6 +36,13 @@ Les instruments seront confiés à la temperature collectée en surface par une 
 
 Ces données ont toutes la particularité d'avoir été collectées à la Réunion, avec des dispositifs open-source specialement développés par cette équipe de chercheurs. Elles font partie d'un plus vaste jeu de donnée, public lui aussi [1]
 
+<img 
+  src="/images/toccata_sous_marine_eaux_reunionaises/turtle_tag_pics.png" 
+  alt="turtle_tag_pics" 
+  style="width: 500px; max-width: 100%; height: auto;  display: block; margin: 2rem auto;"
+/>
+
+
 > [1] Mohan Julien, Gogendeau Pierre, Boyer Alexandre, Goharzadeh Andrea, Etienne Titouan, de Knyff Laurent, A’bear Luke, Sanchez Cheryl, Quillard Mireille, Paute François-Elie, Bernard Serge, Bonhommeau Sylvain (2024). A bio-logging dataset on the diving behaviours of juvenile sea turtles from the southwestern Indian Ocean. SEANOE. https://doi.org/10.17882/102544
 
 Dans cette exploration, on garde les données des balises nommées *dcp-urelease-018*, *turtle-iot-046* et *ray-urelease-63b*. 

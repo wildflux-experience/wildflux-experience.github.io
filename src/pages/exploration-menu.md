@@ -17,9 +17,9 @@ backLabel: Retour
 
 ## Démo en live
 
-**▶ Improvisation #1 (nano-ultrasonic et nano-fishnchip)**  : [Vidéo](lien) | [Audio](lien)
+**▶ Improvisation #1 [nano-ultrasonic & nano-fishnchip]**  : [Vidéo](lien) | [Audio](lien) | [Article](/explorations/improvisation-1-ultrasonic-fishnchip)
 
-**▶ Des doigts mouillés et du citron (nano-water)**  : [Vidéo](lien) | [Audio](lien)
+**▶ Des doigts mouillés et du citron [nano-water]**  : [Vidéo](lien) | [Audio](lien) | [Article](lien)
 
 ## Les collabs
 
