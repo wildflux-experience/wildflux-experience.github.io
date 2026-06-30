@@ -27,6 +27,5 @@ export const menuItems = [
   { label: 'Le coeur', href: '/le-coeur/', description: 'Page Le Coeur' },
   { label: 'Explorations', href: '/exploration-menu/', description: 'Menu page explorations' },
   { label: 'Articles', href: '/articles-menu/', description: 'Menu page articles' },
-  { label: 'La démarche', href: '/la-demarche/', description: 'Page demarche' },
   { label: 'En savoir +', href: '/en-savoir-plus/', description: 'Page en savoir plus' },
 ];
