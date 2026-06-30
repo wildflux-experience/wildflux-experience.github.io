@@ -42,7 +42,7 @@ Le *Thereminuscule* et ses *Nano-Modules* cherchent à rendre perceptibles des p
 
 > ***Figure 1**. Illustration du concept au cœur des dispositifs de WildFlux Experience.*
 
-L'idée derrière ce projet est que tout phénomène physique, par le biais de capteurs adaptés, peut être convertie en une suite de valeurs numériques interprétables par un programme informatique. Une fois dans le monde virtuel, il est simple d'imaginer un ensemble de règles pour traduire ces suites de nombres en notes de musique et ainsi réaliser la passerelle entre monde réel et le monde de la création musical assité par ordinateur.
+L'idée derrière ce projet est que tout phénomène physique, par le biais de capteurs adaptés, peut être convertie en une suite de valeurs numériques interprétables par un programme informatique. Une fois dans le monde virtuel, il est simple d'imaginer un ensemble de règles pour traduire ces suites de nombres en notes de musique et ainsi réaliser la passerelle entre monde réel et le monde de la création musicale assitée par ordinateur.
 
 ## Jouer à l’intuition et sans fausses notes
 
@@ -217,17 +217,13 @@ La liste ci-dessous présente une palette de Nano-Modules possiblement réalisab
 
 *Ces modules explorent des principes physiques simples, facilement observables et manipulables : la lumière, la conductivité, la résistance électrique, le contact, l’eau, le corps humain ou encore le magnétisme. Leur objectif n’est pas seulement de produire un signal numérique exploitable par le Thereminuscule, mais aussi de rendre perceptible le lien entre un phénomène concret et la mélodie produite. Ils sont bien adaptés aux ateliers de fabrication et à la médiation scientifique.*
 
-La **Boîte à lumière** propose de jouer avec l’ombre, la transparence et la couleur. En ouvrant une boîte, en faisant passer des papiers colorés ou en tournant une roue devant un capteur, les variations lumineuses deviennent des ondes sonores.
+Le **Dessin graphite** repose sur un principe simple : un tracé au crayon papier ou à la peinture conductrice devient une piste résistive que l’on peut modifier à volonté.
 
-Le **Dessin graphite** repose sur un principe tout aussi accessible : un simple tracé au crayon papier ou à la peinture conductrice devient une piste résistive que l’on modifier à volonté.
+Avec le **Pince-crocodile orchestra**, différents objets du quotidien, pâte salée, éponge humide, métal, fruit, etc. sont reliés au système afin d’explorer leur conductivité.
 
-Avec le **Pince-crocodile orchestra**, différents objets du quotidien, pâte salée, éponge humide, métal, fruit, ..., sont reliés au système afin d’explorer leur conductivité.
+Le **Circuit humain** prolonge cette idée en faisant des participants eux-mêmes une partie du circuit. En se touchant ou en reliant plusieurs points conducteurs, ils produisent collectivement un le flux de données à l'origine de la mélodie jouée..
 
-Le **Circuit humain** prolonge cette idée en faisant des participants eux-mêmes une partie du circuit: en se touchant ou en reliant plusieurs points conducteurs, ils produisent collectivement un le flux de données à l'origine de la mélodie jouée..
-
-Le **Bassin à doigts** introduit quant à lui l’eau comme interface sensible : la présence des doigts, le niveau du liquide ou la modification de sa conductivité, par l'ajout de sel ou de jus de citron pour exemple, influencent directement le signal entrant dans le *Thereminuscule*.
-
-Le **Pendule magnétique** ouvre une dimension plus contemplative. Un aimant suspendu oscille au-dessus de capteurs et rend audible une force invisible. Le mouvement et la variation du champ magnétique induites deviennent une signal musical lent et hypnotique.
+Le **Pendule magnétique** ouvre une dimension plus contemplative. Un aimant suspendu oscille au-dessus de capteurs et rend audible une force invisible. Le mouvement et la variation du champ magnétique induits deviennent un signal musical lent et hypnotique.
 
 #### Jouer pour ressentir
 
@@ -243,7 +239,7 @@ Le **Didgeridoo numérique**, enfin, mobilise le souffle comme geste expressif. 
 
 #### Contempler pour questionner
 
-*Ces modules sont davantage portés par leur forme, leur imaginaire ou leur dimension plastique : soleil, nuages, matière frottée, eau qui sèche, branche qui plie, foule, jardin, méduse, écume, magnétisme, constellation. Leur rôle n’est pas seulement de produire un contrôle musical, mais aussi de faire surgir une question, une image ou une situation.*
+*Ces modules sont davantage portés par leur forme, leur imaginaire ou leur dimension plastique. Leur rôle n’est pas seulement de produire un contrôle musical, mais surtout de faire surgir une question, une image ou une situation.*
 
 La **Mini centrale solaire** transforme la lumière en source musicale. Un petit panneau solaire, orienté à la main ou exposé à des soleils artificiels, réagit aux ombres et aux nuages translucides que l’on place devant lui.
 
